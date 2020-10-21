@@ -1,0 +1,19 @@
+{% block header %}
+    <header class="masthead mb-auto">
+        <div class="mb-5"><h3 class="masthead-brand">FishMarket</h3>
+            <nav class="nav nav-masthead float-right justify-content-center menu">
+                {% block auth %}
+                    {% include 'mainapp/includes/inc_menu.html' %}
+                {% endblock %}
+            </nav>
+        </div>
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center menu">
+                <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'main' %}">Главная</a>
+                <a class="nav-link {% if request.path == '/catalog/' %}active{% endif %}"
+                   href="{% url 'catalog:index' %}">Каталог</a>
+                <a class="nav-link {% if request.path == '/contacts/' %}active{% endif %}" href="{% url 'contacts' %}">Контакты</a>
+            </nav>
+        </div>
+    </header>
+{% endblock %}

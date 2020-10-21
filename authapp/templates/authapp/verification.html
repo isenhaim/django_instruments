@@ -1,0 +1,15 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="text-center">
+    {% if user.is_authenticated %}
+        <h3>Активация прошла успешно <br></h3>
+        Добро пожаловать {{ user.username }}
+        <p></p>
+    {% else %}
+        <h3>Активация не пройдена</h3>
+    {% endif %}
+    <a href="{% url 'main' %}" class="btn btn-info">На главную</a>
+    </div>
+{% endblock %}

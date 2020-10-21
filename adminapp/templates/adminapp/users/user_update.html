@@ -1,0 +1,17 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+{% load tags %}
+
+{% block content %}
+    <form class="form-horizontal text-left w-75 mx-auto" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center">
+            <input class="btn btn-success text-center" type="submit" value="сохранить"></div>
+    </form>
+    <button class="btn btn-round form-control last">
+        <a href="{% url 'admin:users' %}">
+            к списку пользователей
+        </a>
+    </button>
+{% endblock %}

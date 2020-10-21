@@ -1,0 +1,9 @@
+<div class="inner mb-3">
+    <nav class="nav nav-masthead justify-content-center menu">
+        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'main' %}"><i class="fas fa-home"></i></a>
+        <a class="nav-link {% if request.path == '/admin/users/read/' %}active{% endif %}"
+           href="{% url 'admin:users' %}"><i class="fas fa-users"></i></a>
+        <a class="nav-link {% if request.path == '/admin/categories/read/' %}active{% endif %}"
+           href="{% url 'admin:categories' %}"><i class="fa fa-bars"></i></a>
+    </nav>
+</div>

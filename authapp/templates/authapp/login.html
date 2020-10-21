@@ -1,0 +1,14 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <form class="form-signin" action="{% url 'auth:login' %}" method="post">
+        {% csrf_token %}
+        {{ login_form.as_p }}
+        <div class="text-center mt-5">
+            <button class="btn btn-lg badge-danger" type="submit">Войти</button>
+        </div>
+    </form>
+
+{% endblock %}

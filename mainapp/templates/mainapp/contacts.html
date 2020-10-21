@@ -1,0 +1,43 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <h1>Напишите нам</h1>
+
+    <form class="form-horizontal text-left w-75 mx-auto" action="">
+
+        <div class="col-sm-12  text-left form-group">
+            <label class="form-check-label mt-3" for="name">Ваше имя:</label>
+            <input class="form-control" type="text" size="40">
+
+
+            <label class="form-check-label mt-3" for="email">Email:</label>
+            <input class="email form-control" type="email" size="40">
+
+            <label class="form-check-label mt-3" for="name">Тема:</label>
+            <input class="form-control" type="text" size="40">
+
+            <textarea class="form-control mt-3" name="comment" rows="3"></textarea>
+
+            <div class="mt-4 text-center">
+                <button type="button" class="btn btn-danger btn-group-sm">Отправить</button>
+                <button type="reset" class="btn btn-secondary btn-group-sm">Очистить</button>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="text-ce">
+        <h3>Адрес</h3>
+        <p>Контактный номер телефона: <b>+7-999-99-99</b></p>
+        <p>Адрес: <b>г. Санкт-Петербург, ул. Симонова, д.100</b></p>
+        <p>Email: <b>fishing@planet.com</b></p>
+    </div>
+    <div class="mt-4">
+    <h3>Как нас найти</h3>
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3b12966ce81da84294c8899b7dc26e0434177ee0c57a8a8531b7d71d22b0b118&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    </div>
+{% endblock %}

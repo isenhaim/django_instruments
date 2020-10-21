@@ -1,0 +1,68 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load tags %}
+
+{% block content %}
+    <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Изображение</th>
+                <th scope="col">Наименование</th>
+                <th scope="col">Категория</th>
+                <th scope="col">Редактировать</th>
+                <th scope="col">Удалить</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for object in basket_items %}
+                <tr>
+                    <th scope="row" class="align-middle">{{ object.pk }}</th>
+                    <td class="align-middle"><img
+                            src="{{ object.photo|media_products }}"
+                            alt="{{ object.name }}" width="50px;"></td>
+                    <td class="align-middle">{{ object.name }}</td>
+                    <td class="align-middle">{{ object.category.name }}</td>
+                    <td class="align-middle"><a class="btn btn-info" href={% url 'admin:product_update' object.pk %}><i
+                            class="fas fa-edit"></i></a>
+                    </td>
+                    <td class="align-middle"><a class="btn btn-danger"
+                                                href={% url 'admin:product_delete' object.pk %}><i
+                            class="fas fa-trash-alt"></i></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    <div class="container mt-4">
+        <div class="card-columns">
+            {% for item in basket_items %}
+                <div class="card badge-dark">
+                    <div class="">
+                        <img src="/media/{{ item.product.photo|default:'products_images/default.jpg' }}"
+                             alt="{{ item.product.short_desc }}" class="" style="width: 100%">
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center ml-3" style="font-size: 11px;">{{ item.product.category.name }}</div>
+                        <div class="text-center ml-3" style="height: 50px;">{{ item.product.name }}</div>
+                        <div class="text-success">{{ item.product.price }}&nbspруб</div>
+                        <div class="mt-2">
+                        <input type="number" name="{{ item.pk }}" min="0" value="{{ item.quantity }}" class="w-50 align-middle">
+                        <a href="{% url 'basket:remove' item.pk %}" class="btn btn-sm btn-danger"><i
+                                class="fas fa-trash-alt"></i></a></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {#        {% if basket_items %}#}
+        {#            <div class="basket_summary">#}
+        {#                В корзине {{ basket_items.0.total_quantity }} товаров общей стоимостью#}
+        {#                {{ basket_items.0.total_cost }} руб#}
+        {#            </div>#}
+        {#        {% endif %}#}
+
+        {#        <button class="btn btn-round">#}
+        {#            <a href="{% url 'main' %}">на главную</a>#}
+        {#        </button>#}
+    </div>
+{% endblock %}

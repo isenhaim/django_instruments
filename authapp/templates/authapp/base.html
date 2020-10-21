@@ -1,0 +1,69 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    {% include 'mainapp/includes/inc_main_menu.html' %}
+
+
+    <main role="main" class="inner cover">
+        <div class="container">
+            <div class="login">
+                <div class="h3 mb-3 mt-4 font-weight-normal text-center">
+                    {{ title|title }}
+                </div>
+                {% block content %}
+
+                {% endblock %}
+                {% if request.path == '/auth/login/' %}
+                    <div class="mb-3 mt-4 font-weight-normal text-center">
+                        <a href="{% url 'auth:register' %}">зарегестрироваться</a>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mastfoot mt-md-5">
+        <div class="inner">
+            <p> 2019-{% now 'Y' %} &copy; Евгений Симонов <br> Все права защищены.</p>
+        </div>
+    </footer>
+
+</div>
+<script src="https://kit.fontawesome.com/c1da958ec3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

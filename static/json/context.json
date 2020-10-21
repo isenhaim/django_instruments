@@ -1,0 +1,36 @@
+{
+  "content": [
+    {
+      "main": [
+        {
+          "title": "Главная"
+        }
+      ],
+      "catalog": [
+        {
+          "title": "Каталог"
+        }
+      ],
+      "contacts": [
+        {
+          "title": "Контакты"
+        }
+      ],
+      "lot_1": [
+        {
+          "title": "CATANA EX TELESPIN 165UL"
+        }
+      ],
+      "lot_2": [
+        {
+          "title": "Fishing Descent Ice Reel"
+        }
+      ],
+      "lot_3": [
+        {
+          "title": "Deps Balisong Minnow"
+        }
+      ]
+    }
+  ]
+}

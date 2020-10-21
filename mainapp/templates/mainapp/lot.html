@@ -1,0 +1,23 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+    <hr>
+    <div class="card-deck">
+        {% for product in products %}
+            <div class="card text-white bg-dark mb-3 w-50">
+                <div class="card-header"><h2>{{ product.name }}</h2></div>
+                <img class="card-img-top p-1" src="/media/{{ product.photo }}" alt="">
+                <div class="card-body">
+                    <div class="card-link">
+                        <p class="">Цена: <b>{{ product.price }}</b></p>
+                        <a href="{% url 'basket:add' product.pk %}"
+                           class="btn btn-success btn-group-sm w-75 mb-3">Купить</a>
+                    </div>
+                    <p class="card-text text-justify">{{ product.short_desc|safe }}</p>
+                    <p class="text-justify">{{ product.description|safe }}</p>
+                    <p class="text-left">Количество на складе: <b>{{ product.quantity }}</b></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
