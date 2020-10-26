@@ -7,6 +7,7 @@
         {% csrf_token %}
         <div class="user_avatar text-center"><img src="{{ user.avatar|media_users }}"></div>
         {{ edit_form.as_p }}
+        {{ profile_form.as_p }}
         <div class="text-center">
             <button class="btn btn-lg badge-danger" type="submit" value="">Cохранить</button>
         </div>

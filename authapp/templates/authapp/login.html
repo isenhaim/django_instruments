@@ -9,6 +9,10 @@
         <div class="text-center mt-5">
             <button class="btn btn-lg badge-danger" type="submit">Войти</button>
         </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'social:begin' 'github' %}?next=/"><i class="fab fa-github fa-3x"></i></a>
+            <a class="ml-3" href="{% url 'social:begin' 'google-oauth2' %}?next=/"><i class="fab fa-google fa-3x"></i></a>
+        </div>
     </form>
 
 {% endblock %}
