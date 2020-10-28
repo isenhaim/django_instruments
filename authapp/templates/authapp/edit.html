@@ -3,7 +3,7 @@
 {% load tags %}
 
 {% block content %}
-    <form class="form-horizontal text-left w-50 mx-auto" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal text-left w-75 mx-auto" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="user_avatar text-center"><img src="{{ user.avatar|media_users }}"></div>
         {{ edit_form.as_p }}
