@@ -76,7 +76,7 @@ class OrderItem(models.Model):
         return self.product.price * self.quantity
 
     def get_item(pk, **kwargs):
-        return OrderItem.objects.get(pk=pk)
+        return OrderItem.objects.get(pk=pk).select_related()
 
     def delete(self):
         self.product.quantity += self.quantity
