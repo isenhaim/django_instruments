@@ -114,7 +114,6 @@ def register(request):
             user = register_form.save()
 
             if send_verify_mail(user):
-                # pass
                 return HttpResponseRedirect(reverse('auth:login'))
             else:
                 return HttpResponseRedirect(reverse('auth:login'))
