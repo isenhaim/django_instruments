@@ -61,3 +61,5 @@ def category(request, pk=None):
     }
 
     return render(request, 'mainapp/catalog.html', content)
+
+

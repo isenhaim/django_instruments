@@ -13,6 +13,8 @@ from ordersapp.forms import OrderItemForm
 
 from django.dispatch import receiver
 from django.db.models.signals import pre_save, pre_delete
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 
 
 class OrderList(ListView):
@@ -20,6 +22,10 @@ class OrderList(ListView):
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
+
+    @method_decorator(login_required())
+    def dispatch(self, *args, **kwargs):
+        return super(ListView, self).dispatch(*args, **kwargs)
 
 
 class OrderItemsCreate(CreateView):
@@ -67,6 +73,10 @@ class OrderItemsCreate(CreateView):
 
         return super(OrderItemsCreate, self).form_valid(form)
 
+    @method_decorator(login_required())
+    def dispatch(self, *args, **kwargs):
+        return super(CreateView, self).dispatch(*args, **kwargs)
+
 
 class OrderItemsUpdate(UpdateView):
     model = Order
@@ -103,6 +113,10 @@ class OrderItemsUpdate(UpdateView):
 
         return super(OrderItemsUpdate, self).form_valid(form)
 
+    @method_decorator(login_required())
+    def dispatch(self, *args, **kwargs):
+        return super(UpdateView, self).dispatch(*args, **kwargs)
+
 
 class OrderRead(DetailView):
     model = Order
@@ -112,6 +126,9 @@ class OrderRead(DetailView):
         context['title'] = 'заказ/просмотр'
         return context
 
+    @method_decorator(login_required())
+    def dispatch(self, *args, **kwargs):
+        return super(DetailView, self).dispatch(*args, **kwargs)
 
 class OrderDelete(DeleteView):
     model = Order

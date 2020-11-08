@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponseRedirect
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 from django.contrib import auth
@@ -31,7 +32,7 @@ from authapp.forms import ShopUserProfileEditForm
 #     url = gravatar_url(email, size)
 #     return mark_safe('<img src="%s" height="%d" width="%d">' % (url, size, size))
 #
-
+@login_required
 @transaction.atomic
 def edit(request):
     title = 'редактирование'
