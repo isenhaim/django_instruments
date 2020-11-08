@@ -224,3 +224,4 @@ SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
 LOGIN_REDIRECT_URL = '/'
 LOGIN_ERROR_URL = '/'
 LOGIN_URL = '/auth/login/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
