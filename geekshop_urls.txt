@@ -33,7 +33,7 @@
 /disconnect/<backend>/	social_django.views.disconnect	social:disconnect
 /disconnect/<backend>/<association_id>/	social_django.views.disconnect	social:disconnect_individual
 /login/<backend>/	social_django.views.auth	social:begin
-/media/<path>	django.views.static.serve
+/media\/<path>	django.views.static.serve
 /order/	ordersapp.views.OrderList	order:orders_list
 /order/create/	ordersapp.views.OrderItemsCreate	order:order_create
 /order/delete/<pk>/	ordersapp.views.OrderDelete	order:order_delete
