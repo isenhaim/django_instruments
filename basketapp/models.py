@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.utils.functional import cached_property
+
 from mainapp.models import Product
 
 
@@ -18,6 +20,7 @@ class Basket(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт')
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
+
     # objects = BasketQuerySet.as_manager()
 
     class Meta:
@@ -30,19 +33,21 @@ class Basket(models.Model):
 
     @property
     def get_count(self):
-        _items = Basket.objects.filter(user=self.user)
-        _totalquantity = sum(list(map(lambda x: x.quantity, _items)))
-        return _totalquantity
+        _items = self.get_items_cached
+        return sum(list(map(lambda x: x.quantity, _items)))
 
     @property
     def get_cost(self):
-        _items = Basket.objects.filter(user=self.user)
-        _totalcost = sum(list(map(lambda x: x.product_cost, _items)))
-        return _totalcost
+        _items = self.get_items_cached
+        return sum(list(map(lambda x: x.product_cost, _items)))
 
     @staticmethod
     def get_items(user):
         return Basket.objects.filter(user=user).order_by('product__category')
+
+    @cached_property
+    def get_items_cached(self):
+        return self.user.basket.select_related()
 
     @staticmethod
     def get_item(pk, **kwargs):
