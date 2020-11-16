@@ -1,12 +1,16 @@
 from django.contrib.auth.decorators import login_required
+from django.db.models import F
 from django.shortcuts import render, HttpResponseRedirect
+from django.views.generic import UpdateView
+
+from adminapp.views import db_profile_by_type
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 from django.contrib import auth
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.core.mail import send_mail
 from django.conf import settings
 from authapp.models import ShopUser
-from django.db import transaction
+from django.db import transaction, connection
 from authapp.forms import ShopUserProfileEditForm
 
 # import hashlib
@@ -32,6 +36,9 @@ from authapp.forms import ShopUserProfileEditForm
 #     url = gravatar_url(email, size)
 #     return mark_safe('<img src="%s" height="%d" width="%d">' % (url, size, size))
 #
+from mainapp.models import ProductCategory
+
+
 @login_required
 @transaction.atomic
 def edit(request):

@@ -1,0 +1,8 @@
+http://isenhaim.ru/
+http://isenhaim.ru/catalog/
+http://isenhaim.ru/catalog/category/1/
+http://isenhaim.ru/basket/
+http://isenhaim.ru/order/
+http://isenhaim.ru/auth/edit/
+http://isenhaim.ru/order/update/1/
+http://isenhaim.ru/order/create/

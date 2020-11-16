@@ -1,0 +1,197 @@
+[
+  {
+    "model": "sessions.session",
+    "pk": "74rt2ji0nwvsr8b98hsico64a9yb5jmu",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGllrxz8o6XMGa9fe4ACypTipEHeHSCmgfTPzXiLitpa4dV7inMVFKHH63QjTg-sO8h3rrcnU6rrMJHdFHrTLsWV-Xg_376BgL9-aA0KwoIeEhIYceBVIB0gIMBmvTGbrrAdKhpXWMLDR5-AMeyY92SDeH85PNyo:1kZsl4:2JXhhdy2DrMKubvwdC_eYqRWosLAKHALCz-KuUn5Crs",
+      "expire_date": "2020-11-17T09:37:42.831Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "lbr15cagkj4a69apk4jv48isuecif9os",
+    "fields": {
+      "session_data": "ODdhYjAwYzRlNzkxYmZjNzAyNjcyNGZiOWQ0MjRjNDk1NGQwM2UwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhYzg3NWI0N2Y1Y2E4NTUyNTFkZWJjZWQ0YjEwODFlYjY4ZmIyMDNkIn0=",
+      "expire_date": "2020-11-15T08:43:08.341Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "qy10fmutqogec44tk2moqtuzmjwx2ajs",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGllrxz8o6XMGa9fe4ACypTipEHeHSCmgfTPzXiLitpa4dV7inMVFKHH63QjTg-sO8h3rrcnU6rrMJHdFHrTLsWV-Xg_376BgL9-aA0KwoIeEhIYceBVIB0gIMBmvTGbrrAdKhpXWMLDR5-AMeyY92SDeH85PNyo:1kaa3e:UjS9EBuAxlR9En-dfgcd3aYRq0Aw8h21mD39Y0HMX3U",
+      "expire_date": "2020-11-19T07:51:46.929Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "wn8uh7w2q6eko8nhafgfvuxsjt4fxs3h",
+    "fields": {
+      "session_data": "MzJhNzFmMDRiYTBiZGFkNjQ1Zjg3MjAzMzEzODk4NWQxZDFhY2UzMTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxZDQ4NWIwOWZiMWNhY2FlOTY2MzhhODBkMjFjODM0MjE0OThhZTI5In0=",
+      "expire_date": "2020-11-27T12:13:02.342Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "zb188mpf8uyjl1dtxq3b2f22o4zzyf3n",
+    "fields": {
+      "session_data": "ODdhYjAwYzRlNzkxYmZjNzAyNjcyNGZiOWQ0MjRjNDk1NGQwM2UwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhYzg3NWI0N2Y1Y2E4NTUyNTFkZWJjZWQ0YjEwODFlYjY4ZmIyMDNkIn0=",
+      "expire_date": "2020-11-11T08:19:03.770Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Спиннинги",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Катушки",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Приманки",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "CATANA EX TELESPIN 165UL",
+      "photo": "products_images/lot_1.jpg",
+      "short_desc": "Спиннинг обладает умеренно-быстрым строем.\nЭто означает, что это удилище с хорошим прогрессивным строем, что идеально подходит для всестороннего использования и различных видов рыбалки.\nЭта телескопическая версия спиннингов Шимано Catana для рыболовов, которые хотят компактную удочку (спиннинг)\nдержать в задней части автомобиля или перевозить с собой компактно в любом транспорте.",
+      "description": "Обновленные и улучшенные бланки с большей чувствительностью и жесткостью.\nБланки отлично калиброваны по кастинговым весам.\nСовременная и заметная косметика.\nНовый катушкодержатель Seaguide с зоной Vibraspot для тактильного контроля поклевки и проводки.\nБольшой ассортимент удилищ для всех видов рыбалки.\nКомпактная, телескопическая версия для путешествий",
+      "category": 1,
+      "price": "3750.00",
+      "quantity": 38,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "Fishing Descent Ice Reel",
+      "photo": "products_images/lot_2.jpg",
+      "short_desc": "Descent Ice Reel 13 Fishing - высокотехнологичная катушка для зимней рыбалки американского производства.",
+      "description": "Высокотехнологичная катушка для зимней рыбалки американского производства.\nКатушка имеет легкий, но прочный пластиковый корпус.\nОна оснащена тормозной системой с тонкой настройкой фрикицона,\n4 стальными шариковыми подшипниками, системой антиреверса,\nшпулей из композитного материала и ручкой с кнобами из софт-тач пластика.\nТщательно выверенная конструкция катушки обеспечивает удобство пользования и высокую эффективность при вываживании рыбы.",
+      "category": 2,
+      "price": "3800.00",
+      "quantity": 21,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Тест",
+      "photo": "products_images/чернушка.jpg",
+      "short_desc": "Тест",
+      "description": "Тест",
+      "category": 1,
+      "price": "2500.00",
+      "quantity": 12,
+      "is_active": true
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$h5aGNCvIl6OE$GWM65Jv4DozZTiQ8fiO0/QP6xJtrS9X/QBaPGxx990s=",
+      "last_login": "2020-11-13T12:13:02.326Z",
+      "is_superuser": true,
+      "username": "django",
+      "first_name": "",
+      "last_name": "",
+      "email": "django@geekshop.local",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-10-28T08:18:28.192Z",
+      "avatar": "",
+      "age": 27,
+      "activation_key": "",
+      "activation_key_expires": "2020-10-29T08:18:27.931Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 2,
+    "fields": {
+      "password": "!sSJrENprTQ7aB97h7EtpSSaTGu72aABxea62xeyX",
+      "last_login": "2020-11-13T12:08:21.276Z",
+      "is_superuser": false,
+      "username": "isenhaim",
+      "first_name": "Евгений",
+      "last_name": "Симонов",
+      "email": "polunochnick@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-11-03T09:42:26.330Z",
+      "avatar": "",
+      "age": 18,
+      "activation_key": "",
+      "activation_key_expires": "2020-11-04T09:30:26.589Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "tagline": "",
+      "aboutMe": ""
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "tagline": "",
+      "aboutMe": ""
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "provider": "github",
+      "uid": "37544862",
+      "extra_data": "{\"auth_time\": 1604396546, \"id\": 37544862, \"expires\": null, \"login\": \"isenhaim\", \"access_token\": \"ddcc8b89bee421055a88503777cc62e1fcb90aa0\", \"token_type\": \"bearer\"}",
+      "created": "2020-11-03T09:42:26.338Z",
+      "modified": "2020-11-03T09:42:26.342Z"
+    }
+  },
+  {
+    "model": "social_django.usersocialauth",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "provider": "google-oauth2",
+      "uid": "polunochnick@gmail.com",
+      "extra_data": "{\"auth_time\": 1605269301, \"expires\": 3599, \"token_type\": \"Bearer\", \"access_token\": \"ya29.A0AfH6SMByrE3H4VkNj_OoevzKsxbIzCpcAtavclkpQyFavLQeYurxsASUWDblSx3rzt649ede3SFOwvcs3rCmXLdzTqKx0FcZ8dd8bXuJCVYgycwQvtfrRVldTfycCNWSIcCONYrgAbw5HmyKE52MQlYpFbs7oFCww_b-EXFS768\"}",
+      "created": "2020-11-13T12:08:21.229Z",
+      "modified": "2020-11-13T12:08:21.237Z"
+    }
+  }
+]

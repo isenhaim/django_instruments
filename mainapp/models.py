@@ -4,7 +4,7 @@ from django.db import models
 class ProductCategory(models.Model):
     name = models.CharField(verbose_name='имя', max_length=64, unique=True)
     description = models.TextField(verbose_name='описание', blank=True)
-    is_active = models.BooleanField(verbose_name='активна', default=True, db_index=True)
+    is_active = models.BooleanField(verbose_name='активна', default=True)
 
     class Meta:
         verbose_name = 'категория'
@@ -22,6 +22,7 @@ class Product(models.Model):
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, verbose_name='изображение товара')
     price = models.DecimalField(verbose_name='цена товара', max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveIntegerField(verbose_name='количество на складе', default=0)
+    is_active = models.BooleanField(verbose_name='активна', default=True)
 
     class Meta:
         verbose_name = 'товар'

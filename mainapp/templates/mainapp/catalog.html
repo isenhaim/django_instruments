@@ -15,17 +15,17 @@
             <div class="card-deck">
                 <div class="card text-white bg-dark mb-3">
                     <div class="card-header">{{ product.name }}</div>
-                    <img class="card-img-top p-1" src="/media/{{ product.photo|default:'products_images/default.jpg'}}" alt="">
+                    <div class="w-50 mx-auto mt-2"><img class="card-img-top p-1" src="/media/{{ product.photo|default:'products_images/default.jpg'}}" width="100px;" alt=""></div>
                     <div class="card-link">
                         <p class="mt-2">Цена: <b>{{ product.price }}</b></p>
                         <a href="{% url 'basket:add' product.pk %}"
-                           class="btn btn-success btn-group-sm w-75 mb-1">Купить</a>
+                           class="btn btn-success btn-group-sm w-25">Купить</a>
                         <a href="{% url 'catalog:item' product.pk %}"
-                           class="btn btn-info btn-group-sm w-75 mb-4">Подробнее</a>
+                           class="btn btn-info btn-group-sm w-25">Подробнее</a>
                     </div>
                     <div class="card-body">
                         <p class="card-text text-left">{{ product.short_desc|safe }}</p>
-                        <p class="text-left">Количество на складе: <b>{{ product.quantity }}</b></p>
+                        <p class="text-left">Количество на складе: <b><span style="color: #ccc">{{ product.quantity }}</span></b></p>
                     </div>
                 </div>
             </div>
