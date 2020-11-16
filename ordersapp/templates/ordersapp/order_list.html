@@ -4,12 +4,12 @@
 
 {% block content %}
     <div class="h2 text-center head">
-        Ваши заказы,
-        {% if user.first_name %}
-            {{ user.first_name|title }}
-        {% else %}
-            Пользователь
-        {% endif %}
+        Ваши заказы
+{#        {% if user.first_name %}#}
+{#            {{ user.first_name|title }}#}
+{#        {% else %}#}
+{#            Пользователь#}
+{#        {% endif %}#}
     </div>
     <table class="table table-dark table-striped">
         <thead>

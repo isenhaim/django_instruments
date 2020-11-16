@@ -3,20 +3,20 @@
 {% load tags %}
 
 {% block content %}
-    <form class="form-horizontal text-left w-75 mx-auto" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal text-left mx-auto" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="user_avatar text-center"><img src="{{ user.avatar|media_users }}"></div>
+        <div class="user_avatar text-center"><img class="w-50" src="{{ user.avatar|media_users }}"></div>
         {{ edit_form.as_p }}
         {{ profile_form.as_p }}
         <div class="text-center">
-            <button class="btn btn-lg badge-danger" type="submit" value="">Cохранить</button>
+            <button class="btn btn-lg badge-danger mt-4 mb-5" type="submit" value="">Cохранить</button>
         </div>
 
     </form>
-    <button class="btn btn-round form-control last">
-        <a href="{% url 'main' %}" class="">
-            на главную
-        </a>
-    </button>
+{#    <button class="btn btn-round form-control last">#}
+{#        <a href="{% url 'main' %}" class="">#}
+{#            на главную#}
+{#        </a>#}
+{#    </button>#}
     <script src="{% static 'js/style.js' %}"></script>
 {% endblock %}

@@ -17,12 +17,12 @@ def contacts(request):
     return render(request, 'mainapp/contacts.html', context=content)
 
 
-@cache_page(3600)
+# @cache_page(3600)
 def catalog(request, pk=None):
     links_menu = get_links_menu()
 
     if pk is not None:
-        products = get_products()
+        products = Product.objects.filter(pk=pk)
         content = {
             'products': products,
         }
